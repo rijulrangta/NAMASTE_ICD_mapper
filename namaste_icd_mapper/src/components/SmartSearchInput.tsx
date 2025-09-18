@@ -49,17 +49,17 @@ const SmartSearchInput: React.FC<Props> = ({ value, onChange, onSelect, isDark }
         onChange={e => { onChange(e.target.value); setShowSuggestions(true); setHighlightedIndex(-1); }}
         onKeyDown={handleKeyDown}
         onFocus={() => setShowSuggestions(suggestions.length > 0)}
-        className={`peer w-full px-6 pt-6 pb-3 pr-16 rounded-2xl border-2 transition-all duration-300
+        className={`peer w-full px-6 pt-6 pb-3 pr-16 rounded-2xl border-2 transition-all duration-300 text-sm
           focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20
           ${isDark ? 'bg-gray-700/50 border-gray-600 text-white' : 'bg-white/70 border-gray-300 text-gray-900'}`}
         placeholder=" "
       />
 
       <label className={`absolute left-6 top-2 text-xs transition-all duration-300 pointer-events-none
-        peer-placeholder-shown:top-5 peer-placeholder-shown:text-base 
+        peer-placeholder-shown:top-5 peer-placeholder-shown:text-sm 
         peer-focus:top-2 peer-focus:text-xs
         ${isDark ? 'text-gray-400 peer-focus:text-blue-400' : 'text-gray-600 peer-focus:text-blue-600'}`}>
-        Search medical diagnosis
+        Enter medical diagnosis
       </label>
 
       {isLoading && <Loader2 className="absolute right-4 top-5 w-5 h-5 animate-spin text-blue-500" />}
