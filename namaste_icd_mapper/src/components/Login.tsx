@@ -26,31 +26,31 @@ const Login: React.FC = () => {
     }`}>
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className={`absolute -top-40 -right-40 w-80 h-80 rounded-full opacity-20 animate-pulse ${
+        <div className={`absolute -top-20 sm:-top-40 -right-20 sm:-right-40 w-40 h-40 sm:w-80 sm:h-80 rounded-full opacity-20 animate-pulse ${
           isDark ? 'bg-blue-500' : 'bg-blue-200'
         }`}></div>
-        <div className={`absolute -bottom-40 -left-40 w-80 h-80 rounded-full opacity-20 animate-pulse delay-2000 ${
+        <div className={`absolute -bottom-20 sm:-bottom-40 -left-20 sm:-left-40 w-40 h-40 sm:w-80 sm:h-80 rounded-full opacity-20 animate-pulse delay-2000 ${
           isDark ? 'bg-indigo-500' : 'bg-indigo-200'
         }`}></div>
       </div>
 
-      <div className={`relative w-full max-w-md p-8 rounded-2xl shadow-2xl backdrop-blur-lg border transition-all duration-500 ${
+      <div className={`relative w-full max-w-sm sm:max-w-md p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-2xl backdrop-blur-lg border transition-all duration-500 ${
         isDark 
           ? 'bg-gray-800/80 border-gray-700 shadow-blue-500/20' 
           : 'bg-white/80 border-white/50 shadow-gray-500/20'
       }`}>
-        <div className="text-center mb-8">
-          <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${
+        <div className="text-center mb-6 sm:mb-8">
+          <div className={`w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full flex items-center justify-center ${
             isDark ? 'bg-blue-600' : 'bg-blue-500'
           }`}>
-            <User className="w-8 h-8 text-white" />
+            <User className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
           </div>
-          <h1 className={`text-3xl font-bold mb-2 ${
+          <h1 className={`text-2xl sm:text-3xl font-bold mb-2 ${
             isDark ? 'text-white' : 'text-gray-900'
           }`}>
-            MediDiagnosis
+            MedLink
           </h1>
-          <p className={`text-sm ${
+          <p className={`text-xs sm:text-sm ${
             isDark ? 'text-gray-400' : 'text-gray-600'
           }`}>
             Advanced Medical Diagnosis System
@@ -66,7 +66,6 @@ const Login: React.FC = () => {
               }`}
             >
               ABHA Token
-              
             </label>
             <input
               id="abhaToken"
@@ -108,7 +107,7 @@ const Login: React.FC = () => {
         <div className={`mt-6 text-center text-sm ${
           isDark ? 'text-gray-400' : 'text-gray-600'
         }`}>
-          Secure access to medical diagnosis system
+          
         </div>
       </div>
     </div>
