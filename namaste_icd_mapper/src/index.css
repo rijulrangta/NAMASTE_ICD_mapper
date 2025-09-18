@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  /* Medical Theme Colors */
+  --medical-primary: #0ea5e9;
+  --medical-secondary: #10b981;
+  --medical-accent: #8b5cf6;
+  --medical-warning: #f59e0b;
+  --medical-error: #ef4444;
+
+  /* Gradients */
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --success-gradient: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  --medical-blue-gradient: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-backdrop: blur(20px);
+
+  /* Dark mode variants */
+  --dark-glass-bg: rgba(17, 24, 39, 0.8);
+  --dark-glass-border: rgba(75, 85, 99, 0.3);
+}
+
+.dark {
+  --glass-bg: var(--dark-glass-bg);
+  --glass-border: var(--dark-glass-border);
+}
+
+/* Utilities */
+.gradient-medical {
+  background: var(--medical-blue-gradient);
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-backdrop);
+  -webkit-backdrop-filter: var(--glass-backdrop);
+}
