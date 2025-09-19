@@ -1,15 +1,9 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "namaste_icd_mapper/package.json",
-      "use": "@vercel/static-build"
-    }
-  ],
   "installCommand": "cd namaste_icd_mapper && npm install",
   "buildCommand": "cd namaste_icd_mapper && npm run build",
   "outputDirectory": "dist",
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
