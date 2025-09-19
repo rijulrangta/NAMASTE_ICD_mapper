@@ -9,9 +9,6 @@
       }
     }
   ],
-  "installCommand": "cd namaste_icd_mapper && npm ci",
-  "buildCommand": "cd namaste_icd_mapper && npm run build",
-  "outputDirectory": "namaste_icd_mapper/dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
