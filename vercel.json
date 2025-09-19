@@ -1,0 +1,6 @@
+{
+  "rootDirectory": "namaste_icd_mapper",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
+}
+

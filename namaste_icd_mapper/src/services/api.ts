@@ -18,7 +18,7 @@ const mockDiagnosisData: Record<string, DiagnosisResult> = {
   'diabetes': {
     diagnosisName: 'Diabetes',
     namasteCode: 'NAM-DM-003',
-    icd11TM2Code: '5A10.Z',
+    icd11TM2Code: '5A11',
     icd11BiomedCode: 'ICD-BIO-DM-003'
   },
   'hypertension': {
