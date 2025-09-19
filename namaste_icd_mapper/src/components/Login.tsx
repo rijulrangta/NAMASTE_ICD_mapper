@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useTheme } from '../contexts/ThemeContext';
-import { User, Loader2 } from 'lucide-react';
+import { User, Loader2, Sun, Moon } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Login: React.FC = () => {
   const [abhaToken, setAbhaToken] = useState('test-token');
   const { login, isLoading } = useAuth();
-  const { isDark } = useTheme();
+  const { isDark, toggleTheme } = useTheme();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -33,6 +33,19 @@ const Login: React.FC = () => {
           isDark ? 'bg-indigo-500' : 'bg-indigo-200'
         }`}></div>
       </div>
+
+      {/* Theme Toggle Button - Fixed to top-right corner */}
+      <button
+        onClick={toggleTheme}
+        className={`fixed top-4 right-4 z-50 p-2 rounded-lg transition-all duration-300 backdrop-blur-sm border ${
+          isDark 
+            ? 'text-gray-400 hover:text-white hover:bg-gray-700/80 border-gray-600' 
+            : 'text-gray-600 hover:text-gray-900 hover:bg-white/80 border-gray-200'
+        }`}
+        title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+      >
+        {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+      </button>
 
       <div className={`relative w-full max-w-sm sm:max-w-md p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-2xl backdrop-blur-lg border transition-all duration-500 ${
         isDark 

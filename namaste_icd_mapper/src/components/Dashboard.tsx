@@ -208,33 +208,35 @@ const Dashboard: React.FC = () => {
 
         {/* Sample Diagnoses */}
         <div
-          className={`mt-6 sm:mt-8 p-4 sm:p-6 rounded-xl border transition-all duration-500 glass-card  ${
+          className={`mt-6 sm:mt-8 rounded-xl sm:rounded-2xl shadow-xl backdrop-blur-sm border transition-all duration-500 ${
             isDark
               ? 'bg-gray-800/30 border-gray-700'
-              : 'bg-white/40 border-gray-200'
+              : 'bg-white/70 border-white/50'
           }`}
         >
-          <h3
-            className={`text-base sm:text-lg font-semibold mb-3 ${
-              isDark ? 'text-white' : 'text-gray-900'
-            }`}
-          >
-            Sample Diagnoses to Try:
-          </h3>
-          <div className="flex flex-wrap gap-2">
-            {['Jwara', 'Fever', 'Diabetes', 'Hypertension'].map((sample) => (
-              <button
-                key={sample}
-                onClick={() => setDiagnosisName(sample)}
-                className={`px-3 py-1 text-xs sm:text-sm rounded-full border transition-all duration-300 ${
-                  isDark
-                    ? 'border-gray-600 text-gray-300 hover:bg-gray-700 hover:text-white'
-                    : 'border-gray-300 text-gray-600 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300'
-                }`}
-              >
-                {sample}
-              </button>
-            ))}
+          <div className="p-4 sm:p-6 lg:p-8">
+            <h3
+              className={`text-base sm:text-lg font-semibold mb-3 ${
+                isDark ? 'text-white' : 'text-gray-900'
+              }`}
+            >
+              Sample Diagnoses to Try:
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {['Jwara', 'Fever', 'Diabetes', 'Hypertension'].map((sample) => (
+                <button
+                  key={sample}
+                  onClick={() => setDiagnosisName(sample)}
+                  className={`px-3 py-1 text-xs sm:text-sm rounded-full border transition-all duration-300 ${
+                    isDark
+                      ? 'border-gray-600 text-gray-300 hover:bg-gray-700 hover:text-white'
+                      : 'border-gray-300 text-gray-600 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300'
+                  }`}
+                >
+                  {sample}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </main>
