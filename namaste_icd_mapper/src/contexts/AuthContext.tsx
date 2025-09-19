@@ -29,7 +29,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       await new Promise((resolve) => setTimeout(resolve, 800));
 
       const newUser: User = {
-        abhaToken: "test-token",
+        abhaToken: abhaToken,
         isAuthenticated: true,
       };
       setUser(newUser);
