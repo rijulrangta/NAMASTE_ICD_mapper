@@ -3,15 +3,13 @@
   "builds": [
     {
       "src": "namaste_icd_mapper/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "namaste_icd_mapper/dist" }
+      "use": "@vercel/static-build"
     }
   ],
-  "routes": [
-    { "src": "/(.*)", "dest": "namaste_icd_mapper/dist/index.html" }
-  ],
-  "framework": "vite",
   "installCommand": "cd namaste_icd_mapper && npm ci",
   "buildCommand": "cd namaste_icd_mapper && npm run build",
-  "outputDirectory": "namaste_icd_mapper/dist"
+  "outputDirectory": "dist",
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
