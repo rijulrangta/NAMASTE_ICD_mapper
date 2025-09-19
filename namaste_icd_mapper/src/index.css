@@ -21,11 +21,21 @@
   /* Dark mode variants */
   --dark-glass-bg: rgba(17, 24, 39, 0.8);
   --dark-glass-border: rgba(75, 85, 99, 0.3);
+
+  /* Toast styling */
+  --toast-bg: #ffffff;
+  --toast-text: #1f2937;
+  --toast-border: #e5e7eb;
 }
 
 .dark {
   --glass-bg: var(--dark-glass-bg);
   --glass-border: var(--dark-glass-border);
+  
+  /* Toast styling for dark theme - white background as requested */
+  --toast-bg: #ffffff;
+  --toast-text: #1f2937;
+  --toast-border: #e5e7eb;
 }
 
 /* Utilities */
