@@ -1,8 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
 
 const DIAGNOSIS_DATABASE = [
-  'Jwara', 'Fever', 'Diabetes Type 1', 'Diabetes Type 2', 'Hypertension',
-  'Asthma', 'Migraine', 'Pneumonia', 'Bronchitis', 'Gastritis', 'Arthritis', 'COVID-19'
+  'Jwara', 'Fever', 'Diabetes', 'Diabetes Type 1', 'Diabetes Type 2', 
+  'Diabetes Mellitus Type 1', 'Diabetes Mellitus Type 2', 'Type 1 Diabetes', 'Type 2 Diabetes',
+  'Hypertension', 'Asthma', 'Migraine', 'Pneumonia', 'Bronchitis', 'Gastritis', 'Arthritis', 'COVID-19'
 ];
 
 export const useSearchSuggestions = (query: string, maxSuggestions = 8) => {
